@@ -9,7 +9,7 @@ const hora = minuto * 60
 const dia = hora * 24
 let temporizadorId
 
-function cuentaRegresiva() {
+const cuentaRegresiva = () => {
   const hoy = new Date()
   const espacioTiempo = cumple - hoy
 
@@ -32,6 +32,7 @@ function cuentaRegresiva() {
   const segundos = Math.floor((espacioTiempo % minuto) / segundo)
 
   tiempoFaltante.innerHTML = dias + 'dias ' + horas + 'horas ' + minutos + 'minutos ' + segundos + 'segundos'
+
 }
 
 temporizadorId = setInterval(cuentaRegresiva, segundo)
