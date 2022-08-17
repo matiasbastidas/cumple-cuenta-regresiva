@@ -14,13 +14,13 @@ const cuentaRegresiva = () => {
   const espacioTiempo = cumple - hoy
 
   if (espacioTiempo <= -dia) {
-    tiempoFaltante.innerHTML = 'Hope you had a nice Birthday!!'
+    tiempoFaltante.innerHTML = 'Espero que hayas tenido un lindo cumpleaños!!'
     clearInterval(temporizadorId)
     return
   }
 
   if (espacioTiempo <= 0) {
-    tiempoFaltante.innerHTML = 'Happy Birthday!!'
+    tiempoFaltante.innerHTML = 'Feliz cumpleaños!'
     clearInterval(temporizadorId)
     return
   }
@@ -31,8 +31,7 @@ const cuentaRegresiva = () => {
   const minutos = Math.floor((espacioTiempo % hora) / minuto)
   const segundos = Math.floor((espacioTiempo % minuto) / segundo)
 
-  tiempoFaltante.innerHTML = dias + 'dias ' + horas + 'horas ' + minutos + 'minutos ' + segundos + 'segundos'
-
+  tiempoFaltante.innerHTML = dias + ' dias - ' + horas + ' horas - ' + minutos + ' minutos - ' + segundos + ' segundos'
 }
 
 temporizadorId = setInterval(cuentaRegresiva, segundo)
